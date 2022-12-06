@@ -1318,6 +1318,8 @@ body{
         height: 80vh;
         display: flex;
         flex-direction: column;
+        align-items: center;
+
 
         input:nth-child(1){
           width: 20rem;
@@ -1664,6 +1666,7 @@ body{
           height: 80vh;
           display: flex;
           flex-direction: column;
+          align-items: center;
           input:nth-child(1){
             width: 16rem;
             height: 2rem;

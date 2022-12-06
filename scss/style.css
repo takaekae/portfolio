@@ -1215,6 +1215,7 @@ body {
     height: 80vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .contact__container .contact__form .form__wrapper input:nth-child(1) {
     width: 20rem;
@@ -1544,6 +1545,7 @@ body {
     height: 80vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .contact__container .contact__form .form__wrapper input:nth-child(1) {
     width: 16rem;
