@@ -367,6 +367,10 @@ body {
   margin: 1rem;
   color: #EEEEEE;
 }
+.services__container .services__list .services__item:hover {
+  box-shadow: none;
+  transition: 0.9s;
+}
 
 .projects__container {
   width: 100%;
@@ -459,6 +463,10 @@ body {
   color: #00ADB5;
   transition: all 0.3s ease-in-out;
 }
+.projects__container .item__container .projects__item:hover {
+  box-shadow: none;
+  transition: 0.9s;
+}
 
 .contact__container {
   width: 100%;
@@ -538,6 +546,10 @@ body {
   bottom: -5px;
   left: 0;
   transition: all 0.3s ease-in-out;
+}
+.contact__container .contact__form .contact__wrapper .contact__item:hover {
+  box-shadow: none;
+  transition: 0.9s;
 }
 .contact__container .contact__form .form__wrapper {
   width: 30vw;
@@ -766,6 +778,10 @@ body {
   }
   .about__container .profile__info .profile__about .skills__container .skills:nth-child(3) span {
     font-size: 0.8rem;
+  }
+  .about__container .profile__info:hover {
+    box-shadow: none;
+    transition: 0.9s;
   }
   .services__container .services__list .services__item {
     width: 30vw;

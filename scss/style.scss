@@ -508,6 +508,11 @@ body{
       color: $text;
     }
     }
+    //remove the box shadow on the last item
+    .services__item:hover {
+      box-shadow: none;
+      transition: 0.9s;
+    }
 
 
     
@@ -589,6 +594,10 @@ body{
         }
       }
     }
+    .projects__item:hover{
+      box-shadow: none;
+      transition: 0.9s;
+    }
 
     
   }
@@ -661,7 +670,10 @@ body{
         }
 
       }
-      
+      .contact__item:hover{
+        box-shadow: none;
+        transition: 0.9s;
+      }  
         }
       .form__wrapper{
         width: 30vw;
@@ -891,13 +903,14 @@ body{
         }
       }
     }
+    .profile__info:hover{
+      box-shadow: none;
+      transition: 0.9s;
+    }
   }
     // SERVICES SECTION
   .services__container {
-    
     .services__list {
-      
-
       .services__item {
         width: 30vw;
         height: 40vh;
@@ -944,17 +957,12 @@ body{
     
           a:nth-child(2):hover {
             @include first__button__hover;
-            font-size: 1rem;
-
-    
+            font-size: 1rem;    
           }
-            
           a:nth-child(3){
             @include second__button;
             font-size: 1rem;
-
-          }
-          
+          }         
           a:nth-child(3):hover{
             @include second__button__hover;
           font-size: 1rem;
@@ -967,12 +975,9 @@ body{
   // CONTACT SECTION
   .contact__container{  
     .contact__form{
-
       .contact__wrapper{
         width:30vw;
-        height: 60vh;
-        
-    
+        height: 60vh; 
         .contact__item{
           @include box__shadow;
           @include center__div;
@@ -980,8 +985,7 @@ body{
           width:10rem;
           padding: 2rem;
           height:25vh;
-          background-color: #222831;
-  
+          background-color: #222831; 
           i{
             font-size: 1rem;
             color: $fourth-color;
@@ -994,43 +998,33 @@ body{
           p{
             color: $text;
             font-size: .6rem;
-
           }
           a{
             position: relative;
             margin-top: 1rem;
             color: $fourth-color;
             font-size: .5rem;
-
-          }
-  
+          } 
         }
-        
           }
         .form__wrapper{
           width: 30vw;
           height: 60vh;
           display: flex;
           flex-direction: column;
-  
           input:nth-child(1){
             width: 20rem;
             height: 2rem;
-            padding: 2rem;
-
-          
-          }
-  
+            padding: 2rem;         
+          } 
           input:nth-child(2){
             width: 20rem;
             height: 2rem;
             padding: 2rem;          }
-  
           input:nth-child(3){
             width: 20rem;
             height: 10rem;
-          }
-  
+          } 
           input:nth-child(4){
             font-size: .5rem;
             width: 6rem;    
@@ -1042,7 +1036,6 @@ body{
         }
       }
   }
-
   .footer__container{
     p{
       margin-top: 3rem;
@@ -1081,38 +1074,30 @@ body{
       .profile__img {
         width: 10rem;
         height: auto;
-        margin: 0 0 5rem 0;
-      
+        margin: 0 0 5rem 0;    
       }
       .nav__container {
-
-        width: 20rem;
-    
+        width: 20rem;  
         li {
           list-style-type: none;
           margin: 0.5rem;
           width: 2rem;
           height: 2rem;
           border-radius: 50%;
-          @include center__div;
-    
+          @include center__div; 
           a {
             color: $fourth-color;
             margin: 1rem auto;
             font-size: .8rem;
           }
-        
-          
         }
         li:hover, .nav__container li:active {
           background-color: $text;
-        }
-        
+        }       
       }
 }
    // ABOUT SECTION
    .about__container{
-
     .profile__info{
     height: 80vh;
     flex-direction: column;
@@ -1148,7 +1133,6 @@ body{
           font-size: .8rem;
         }
       }
-
       .skills__container{
         width: 100%;
         .skills:nth-child(1){
@@ -1159,7 +1143,6 @@ body{
           border: 1px solid $fourth-color;
           border-radius: 2rem;
           margin-right: 2rem;
-
           .title-bar{
             position:absolute;
             top: -2.3rem;
@@ -1218,19 +1201,14 @@ body{
       }
     }
   }
-
   // SERVICES SECTION
   .services__container {
-
-
     height: 120vh;
-    width: 100%;
-    
+    width: 100%; 
     .services__list {
       margin-top: 10rem;
       justify-content: space-around;
       flex-direction: column;
-
       .services__item {
         width: 70vw;
         height: 30vh;
@@ -1253,8 +1231,7 @@ body{
         width: 100%;
         height: auto;
         @include center__div;
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;    
         .projects__item{
           width: 70vw;
           height: 60vh;  
@@ -1267,13 +1244,10 @@ body{
             }
           }
           .projects__info{
-            padding: 2rem;
-        
-            
+            padding: 2rem;        
             a:nth-child(2) {
             @include first__button;
             font-size: .7rem;
-  
             }
       
             a:nth-child(2):hover {
@@ -1286,33 +1260,27 @@ body{
             a:nth-child(3){
               @include second__button;
               font-size: .7rem;
-  
             }
-            
             a:nth-child(3):hover{
               @include second__button__hover;
               font-size: .7rem;
-  
             }
           }
         }   
       }
-  }
+    }
 // CONTACT SECTION
 .contact__container{  
   margin: 20rem auto;
-
   .contact__form{
     flex-direction: column;
     justify-items: center;
-    
     .contact__wrapper{
       margin-top: 2rem;
       width:100%;
       height: 70vh;
       @include center__div;
       flex-direction: column;
-  
       .contact__item{
         @include box__shadow;
         @include center__div;
@@ -1322,7 +1290,6 @@ body{
         padding: 2rem;
         height:25vh;
         background-color: #222831;
-
         i{
           font-size: 2rem;
           color: $fourth-color;
@@ -1342,11 +1309,8 @@ body{
           margin-top: 1rem;
           color: $fourth-color;
           font-size: 1rem;
-
         }
-
       }
-      
         }
       .form__wrapper{
         margin-top: 5rem;
@@ -1358,21 +1322,16 @@ body{
         input:nth-child(1){
           width: 20rem;
           height: 2rem;
-          padding: 2rem;
-
-        
+          padding: 2rem; 
         }
-
         input:nth-child(2){
           width: 20rem;
           height: 2rem;
           padding: 2rem;          }
-
         input:nth-child(3){
           width: 20rem;
           height: 10rem;
         }
-
         input:nth-child(4){
           font-size: 1rem;
           width: 10rem;    
@@ -1392,9 +1351,7 @@ body{
   p{
     margin-top: 3rem;
   }
-
 }
-
 }
 @media screen and(max-width: 375px){
     // HOME SECTION
@@ -1707,15 +1664,11 @@ body{
           height: 80vh;
           display: flex;
           flex-direction: column;
-  
           input:nth-child(1){
             width: 16rem;
             height: 2rem;
             padding: 2rem;
-  
-          
           }
-  
           input:nth-child(2){
             width: 16rem;
             height: 2rem;
@@ -1745,23 +1698,6 @@ body{
     p{
       margin-top: 3rem;
     }
-  
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // }/*# sourceMappingURL=style.css.map */
