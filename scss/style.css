@@ -19,6 +19,60 @@ html {
 body {
   background-image: linear-gradient(to right top, #00adb5, #2197a8, #338196, #3c6b80, #3f5768, #3c4c5b, #38424e, #333841, #2f343d, #2a3039, #262c35, #222831);
 }
+body .loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .loader .scanner span {
+  color: transparent;
+  font-size: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+body .loader .scanner span::before {
+  content: "Loading...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 4px solid #17FEFF;
+  overflow: hidden;
+  color: #17FEFF;
+  -webkit-animation: load91371 2s linear infinite;
+  animation: load91371 2s linear infinite;
+}
+@-webkit-keyframes load91371 {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    border-right-color: transparent;
+  }
+  11%, 21%, 31%, 41%, 51%, 61%, 71%, 81%, 91% {
+    border-right-color: #17FEFF;
+  }
+  60%, 80% {
+    width: 100%;
+  }
+}
+@keyframes load91371 {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    border-right-color: transparent;
+  }
+  11%, 21%, 31%, 41%, 51%, 61%, 71%, 81%, 91% {
+    border-right-color: #17FEFF;
+  }
+  60%, 80% {
+    width: 100%;
+  }
+}
 
 .container {
   width: 100vw;
