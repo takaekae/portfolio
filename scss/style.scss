@@ -585,9 +585,10 @@ body{
 
   }
   .profile__info:hover{
-    box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
-    transition: 0.9s;
-
+    transform: translateY(1rem);
+    border: $fourth-color 0.2em solid;
+    border-radius: 2.5rem 0 2.5rem 0;
+    transition: all 0.5s ease-in-out;
   }
 }
 .services__container {
@@ -645,9 +646,11 @@ body{
     }
     //remove the box shadow on the last item
     .services__item:hover {
+      box-shadow: none;
       transition: 0.9s;
-      box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
-
+      transform: translateY(-1.5rem);
+      border: $fourth-color 0.2em solid;
+      border-radius: 2.5rem 0 2.5rem 0;
     }
 
 
@@ -731,8 +734,11 @@ body{
       }
     }
     .projects__item:hover{
+      box-shadow: none;
       transition: 0.9s;
-      box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
+      transform: translateY(-1.5rem);
+      border: $fourth-color 0.2em solid;
+      border-radius: 2.5rem 0 2.5rem 0;
     }
 
     
@@ -810,6 +816,7 @@ body{
 
       }
       .contact__item:hover{
+        box-shadow: none;
         transition: 0.9s;
         box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
 
