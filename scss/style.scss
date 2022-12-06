@@ -847,7 +847,7 @@ body{
       margin: 0;
       .paragraph{
         p{
-          font-size: .7rem;
+          font-size: .9rem;
         }
         a{
         font-size: .8rem;
@@ -1012,6 +1012,7 @@ body{
           height: 60vh;
           display: flex;
           flex-direction: column;
+          align-items: center;
           input:nth-child(1){
             width: 20rem;
             height: 2rem;
@@ -1123,7 +1124,7 @@ body{
         padding: 1rem;
         p{
           text-align: justify;
-          font-size: .7rem;
+          font-size: .8rem;
           line-height: 1rem;
         }
         a{
@@ -1210,7 +1211,7 @@ body{
       justify-content: space-around;
       flex-direction: column;
       .services__item {
-        width: 70vw;
+        width: 60vw;
         height: 30vh;
         margin: 1rem;
         i{
@@ -1236,8 +1237,8 @@ body{
           width: 70vw;
           height: 60vh;  
           .projects__img{
-            width: 80vw;
-            height: 30vh;          
+            width: 70vw;
+            height: 40vh;          
             img:hover{
               transform: scale(1.2);
               transition: 0.5s;
@@ -1285,7 +1286,7 @@ body{
         @include box__shadow;
         @include center__div;
         flex-direction: column;
-        width:70vw;
+        width:60vw;
         height:80vh;
         padding: 2rem;
         height:25vh;
@@ -1703,4 +1704,5 @@ body{
     }
   }
 }
+
 // }/*# sourceMappingURL=style.css.map */

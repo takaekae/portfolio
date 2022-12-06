@@ -735,7 +735,7 @@ body {
     margin: 0;
   }
   .about__container .profile__info .profile__about .paragraph p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   .about__container .profile__info .profile__about .paragraph a {
     font-size: 0.8rem;
@@ -896,6 +896,7 @@ body {
     height: 60vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .contact__container .contact__form .form__wrapper input:nth-child(1) {
     width: 20rem;
@@ -1005,7 +1006,7 @@ body {
   }
   .about__container .profile__info .profile__about .paragraph p {
     text-align: justify;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1rem;
   }
   .about__container .profile__info .profile__about .paragraph a {
@@ -1088,7 +1089,7 @@ body {
     flex-direction: column;
   }
   .services__container .services__list .services__item {
-    width: 70vw;
+    width: 60vw;
     height: 30vh;
     margin: 1rem;
   }
@@ -1116,8 +1117,8 @@ body {
     height: 60vh;
   }
   .projects__container .item__container .projects__item .projects__img {
-    width: 80vw;
-    height: 30vh;
+    width: 70vw;
+    height: 40vh;
   }
   .projects__container .item__container .projects__item .projects__img img:hover {
     transform: scale(1.2);
@@ -1181,7 +1182,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 70vw;
+    width: 60vw;
     height: 80vh;
     padding: 2rem;
     height: 25vh;
