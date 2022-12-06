@@ -520,10 +520,8 @@ body .loader .scanner span::before {
   border-radius: 2rem;
 }
 .about__container .profile__info:hover {
-  transform: translateY(1rem);
-  border: #00ADB5 0.2em solid;
-  border-radius: 2.5rem 0 2.5rem 0;
-  transition: all 0.5s ease-in-out;
+  box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
+  transition: 0.9s;
 }
 
 .services__container {
@@ -584,11 +582,8 @@ body .loader .scanner span::before {
   color: #EEEEEE;
 }
 .services__container .services__list .services__item:hover {
-  box-shadow: none;
   transition: 0.9s;
-  transform: translateY(-1.5rem);
-  border: #00ADB5 0.2em solid;
-  border-radius: 2.5rem 0 2.5rem 0;
+  box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
 }
 
 .projects__container {
@@ -683,11 +678,8 @@ body .loader .scanner span::before {
   transition: all 0.3s ease-in-out;
 }
 .projects__container .item__container .projects__item:hover {
-  box-shadow: none;
   transition: 0.9s;
-  transform: translateY(-1.5rem);
-  border: #00ADB5 0.2em solid;
-  border-radius: 2.5rem 0 2.5rem 0;
+  box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
 }
 
 .contact__container {
@@ -770,7 +762,6 @@ body .loader .scanner span::before {
   transition: all 0.3s ease-in-out;
 }
 .contact__container .contact__form .contact__wrapper .contact__item:hover {
-  box-shadow: none;
   transition: 0.9s;
   box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
 }
