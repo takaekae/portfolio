@@ -57,12 +57,14 @@
   border-radius: 5px;
   color: $fourth-color;
   
+  
 }
 
 @mixin first__button__hover {
   background-color: $fourth-color;
   color:$text;
   transition: all 0.3s ease-in-out;
+  
 
   
 }
@@ -105,11 +107,69 @@
   padding: 2rem;
   margin-bottom: 1rem;
   border-radius: .5rem;
-  border: 1px solid $fourth-color;
   background-color: $background;
   color: $text;
   
 }
+
+@mixin child{
+  span {
+    position: absolute;
+   }
+   span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $fourth-color);
+   }
+   span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, $fourth-color);
+   }
+   span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $fourth-color);
+   }
+   span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, $fourth-color);
+   }
+}
+
+@mixin child__hover {
+  transition-delay: 0.6s;
+  span:nth-child(1) {
+  left: 100%;
+  transition: 0.7s;
+  }
+  span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
+  }
+  span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+  }
+  span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+  }
+
+}
+
 
 $font-stack: 'Roboto', sans-serif;
 $background: #222831;
@@ -202,19 +262,26 @@ body{
 
       a:nth-child(1) {
         @include first__button;
+        position: relative;
+        @include child;       
       
       }
-
       a:nth-child(1):hover {
         @include first__button__hover;
+        @include child__hover;
+       
       }
 
-      a:nth-child(2) {
+      a:nth-child(2){
        @include second__button;
+       position: relative;
+       @include child;
+
       }
 
-      a:nth-child(2):hover {
+      a:nth-child(2):hover{
         @include second__button__hover;
+        @include child__hover;
       
       }
 
@@ -335,11 +402,14 @@ body{
 
       a{
       @include second__button;
+      position: relative;
       margin: 0 0 1rem 2rem;
+      @include child;
       }
 
       a:hover{
         @include second__button__hover;
+        @include child__hover;
       }
 
     }
@@ -449,23 +519,24 @@ body{
   }
 
   }
-
+  .profile__info:hover{
+    transform: translateY(1rem);
+    border: $fourth-color 0.2em solid;
+    border-radius: 2.5rem 0 2.5rem 0;
+    transition: all 0.5s ease-in-out;
+  }
 }
 .services__container {
   overflow: hidden;
   @include container;
-  
-  
   h3 {
     @include h3;
     margin: 2rem 0 0 0;
    
   }
-
   h2 {
     @include heading;
   }
-
   .services__list {
     display: flex;
     flex-direction: row;
@@ -512,6 +583,9 @@ body{
     .services__item:hover {
       box-shadow: none;
       transition: 0.9s;
+      transform: translateY(-1.5rem);
+      border: $fourth-color 0.2em solid;
+      border-radius: 2.5rem 0 2.5rem 0;
     }
 
 
@@ -560,7 +634,7 @@ body{
         }
 
         img:hover{
-          transform: scale(1.2);
+          transform: scale(1.1);
           transition: 0.5s;
         }
 
@@ -597,6 +671,9 @@ body{
     .projects__item:hover{
       box-shadow: none;
       transition: 0.9s;
+      transform: translateY(-1.5rem);
+      border: $fourth-color 0.2em solid;
+      border-radius: 2.5rem 0 2.5rem 0;
     }
 
     
@@ -629,7 +706,6 @@ body{
       
   
       .contact__item{
-        @include box__shadow;
         @include center__div;
         flex-direction: column;
         width: 18rem;
@@ -638,6 +714,10 @@ body{
         background-color: #222831;
         margin-bottom: 2rem;
         border-radius: 2rem;
+        border: 1px solid rgba(0, 0, 255, .2);
+        transition: all .2s;
+        box-shadow: 12px 12px 2px 1px rgba(2, 18, 32, 0.2);
+       
 
         i{
           font-size: 1.5rem;
@@ -673,6 +753,9 @@ body{
       .contact__item:hover{
         box-shadow: none;
         transition: 0.9s;
+        box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
+
+        
       }  
         }
       .form__wrapper{
@@ -683,13 +766,10 @@ body{
 
         input:nth-child(1){
           @include input;
-        
         }
-
         input:nth-child(2){
           @include input;
         }
-
         input:nth-child(3){
           width: 30rem;
           height: 20rem;
@@ -698,9 +778,11 @@ body{
           padding: 2rem;
           margin-bottom: 1rem;
           border-radius: .5rem;
-          border: 1px solid $fourth-color;
           background-color: $background;
           color: $text;
+        }
+        input:nth-child(1):hover, input:nth-child(1):focus, input:nth-child(2):hover, input:nth-child(2):focus, input:nth-child(3):hover, input:nth-child(3):focus, input:nth-child(4):hover, input:nth-child(4):focus{
+          border: 1px solid $fourth-color;
         }
 
         input:nth-child(4){
