@@ -19,6 +19,60 @@ html {
 body {
   background-image: linear-gradient(to right top, #00adb5, #2197a8, #338196, #3c6b80, #3f5768, #3c4c5b, #38424e, #333841, #2f343d, #2a3039, #262c35, #222831);
 }
+body .loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .loader .scanner span {
+  color: transparent;
+  font-size: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+body .loader .scanner span::before {
+  content: "Loading...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 4px solid #17FEFF;
+  overflow: hidden;
+  color: #17FEFF;
+  -webkit-animation: load91371 2s linear infinite;
+  animation: load91371 2s linear infinite;
+}
+@-webkit-keyframes load91371 {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    border-right-color: transparent;
+  }
+  11%, 21%, 31%, 41%, 51%, 61%, 71%, 81%, 91% {
+    border-right-color: #17FEFF;
+  }
+  60%, 80% {
+    width: 100%;
+  }
+}
+@keyframes load91371 {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    border-right-color: transparent;
+  }
+  11%, 21%, 31%, 41%, 51%, 61%, 71%, 81%, 91% {
+    border-right-color: #17FEFF;
+  }
+  60%, 80% {
+    width: 100%;
+  }
+}
 
 .container {
   width: 100vw;
@@ -466,10 +520,8 @@ body {
   border-radius: 2rem;
 }
 .about__container .profile__info:hover {
-  transform: translateY(1rem);
-  border: #00ADB5 0.2em solid;
-  border-radius: 2.5rem 0 2.5rem 0;
-  transition: all 0.5s ease-in-out;
+  box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
+  transition: 0.9s;
 }
 
 .services__container {
@@ -530,11 +582,8 @@ body {
   color: #EEEEEE;
 }
 .services__container .services__list .services__item:hover {
-  box-shadow: none;
   transition: 0.9s;
-  transform: translateY(-1.5rem);
-  border: #00ADB5 0.2em solid;
-  border-radius: 2.5rem 0 2.5rem 0;
+  box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
 }
 
 .projects__container {
@@ -629,11 +678,8 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .projects__container .item__container .projects__item:hover {
-  box-shadow: none;
   transition: 0.9s;
-  transform: translateY(-1.5rem);
-  border: #00ADB5 0.2em solid;
-  border-radius: 2.5rem 0 2.5rem 0;
+  box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
 }
 
 .contact__container {
@@ -716,7 +762,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .contact__container .contact__form .contact__wrapper .contact__item:hover {
-  box-shadow: none;
   transition: 0.9s;
   box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
 }
